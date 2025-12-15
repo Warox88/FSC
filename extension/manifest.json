@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Saubere Artikel-PDF",
+  "description": "Liest die aktuelle Seite aus, übersetzt den Artikel ins Deutsche und speichert eine werbefreie PDF-Version.",
+  "version": "1.0.0",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["<all_urls>", "https://libretranslate.de/*"],
+  "action": {
+    "default_title": "Artikel als PDF sichern",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["vendor/Readability.js", "contentScript.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
