@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <title>Artikel als PDF</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, Segoe UI, sans-serif;
+        margin: 12px;
+        width: 320px;
+      }
+      button {
+        background: #1a73e8;
+        color: #fff;
+        border: none;
+        padding: 10px 12px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      button:disabled {
+        opacity: 0.6;
+        cursor: default;
+      }
+      .status {
+        margin-top: 10px;
+        font-size: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="font-size:16px; margin: 0 0 8px 0;">Artikel nach PDF</h1>
+    <p style="margin:0 0 12px 0;">Liest den Hauptartikel der aktuellen Seite, übersetzt ihn ins Deutsche und speichert eine aufgeräumte PDF.</p>
+    <button id="export">PDF erstellen</button>
+    <div class="status" id="status" aria-live="polite"></div>
+    <script src="popup.js"></script>
+  </body>
+</html>
